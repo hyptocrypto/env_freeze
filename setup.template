@@ -1,0 +1,14 @@
+import setuptools
+
+breakpoint()
+setuptools.setup(
+
+    name="$name",
+
+    version="1.0.0",
+
+    description="$name generated via env_freeze",
+
+    packages=setuptools.find_packages(),
+
+)
