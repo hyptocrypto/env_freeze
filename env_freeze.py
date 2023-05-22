@@ -12,7 +12,7 @@ REQUIRED_PKGS = ["wheel", "setuptools"]
 
 def _run_cmd(cmd: list):
     """Wrapper to run subprocess and hide output"""
-    subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    subprocess.run(cmd)
 
 
 def _gen_setup(dir: Path, pkg_name: str) -> None:

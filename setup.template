@@ -1,6 +1,7 @@
 import setuptools
 
-breakpoint()
+
+
 setuptools.setup(
 
     name="$name",
@@ -9,6 +10,10 @@ setuptools.setup(
 
     description="$name generated via env_freeze",
 
-    packages=setuptools.find_packages(),
+    packages=["$name"],
+    
+    package_dir={"$name": "$name"},
+
+    include_package_data=True,
 
 )
