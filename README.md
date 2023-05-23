@@ -1,9 +1,9 @@
 # Env-Freeze 
 
 ### Abstract
-The idea here is to create a identical and portable clone of a python env. Just installing the same packages with the same versions does not result in an 1 to 1 copy due to the fact the the versioning of decency packages can change at any given time.
+In a perfect world, we should never need this package. However, when dealing with some legacy applications, it is possible for builds to start failing due to underlying dependencies being changed. While the right course of action would be to updated the Python version and all packages, this can be a real headache for old poorly written applications. So, the idea here is to clone/port/move a Python virtual env so that reinstalling packages is not needed. Just installing the same packages with the same versions does not result in an 1 to 1 copy due to the fact the the versioning of dependency packages can change at any given time.
 Example (piptree):
-    Here we can see that while we can lock verison of packages 
+```bash
     autoflake 2.1.1
     └── pyflakes
     └── tomli
@@ -14,4 +14,7 @@ Example (piptree):
     └── pathspec
     └── platformdirs
     └── tomli
+```
+    While we can lock version of packages installed directly via pip, the versions of the dependencies of these packages are subject to change.
+    
     
